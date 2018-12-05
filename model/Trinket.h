@@ -48,7 +48,7 @@ DEALINGS IN THE SOFTWARE.
 #include "NonLinearAnalogSensor.h"
 #include "TouchSensor.h"
 
-#include "CircuitPlaygroundIO.h"
+#include "TrinketIO.h"
 
 #include "CodalFiber.h"
 #include "MessageBus.h"
@@ -60,12 +60,12 @@ DEALINGS IN THE SOFTWARE.
 namespace codal
 {
     /**
-      * Class definition for a CircuitPlayground device.
+      * Class definition for a Trinket device.
       *
       * Represents the device as a whole, and includes member variables that represent various device drivers
       * used to control aspects of the device.
       */
-    class CircuitPlayground : public CodalDevice, public CodalComponent
+    class Trinket : public CodalDevice, public CodalComponent
     {
         private:
 
@@ -85,18 +85,7 @@ namespace codal
 
         SAMDTimer                   timer;
         MessageBus                  messageBus;
-        CircuitPlaygroundIO         io;
-        Button                      buttonA;
-        Button                      buttonB;
-        Button                      buttonC;
-        MultiButton                 buttonAB;
-
-        ZI2C                        i2c;
-        ZSPI                        flashSPI;
-        CoordinateSpace             coordinateSpace;
-        LIS3DH                      accelerometer;
-        NonLinearAnalogSensor       thermometer;
-        AnalogSensor                lightSensor;
+        TrinketIO                   io;
 
         ZSingleWireSerial           sws;
         JACDAC                      jacdac;
@@ -108,7 +97,7 @@ namespace codal
           * Create a representation of a Genuino Zero device, which includes member variables
           * that represent various device drivers used to control aspects of the board.
           */
-        CircuitPlayground();
+        Trinket();
 
         void idleCallback();
     };

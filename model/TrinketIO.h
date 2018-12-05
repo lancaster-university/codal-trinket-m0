@@ -68,36 +68,18 @@ namespace codal
     /**
       * Represents a collection of all I/O pins exposed by the device.
       */
-    class CircuitPlaygroundIO
+    class TrinketIO
     {
         public:
 
         ZPin          pin[0];
-        ZPin          a0;
-        ZPin          a1;
-        ZPin          a2;
-        ZPin          a3;
-        ZPin          a4;
-        ZPin          a5;
-        ZPin          a6;
-        ZPin          a7;
-        ZPin          speaker;
-        ZPin          microphoneData;
-        ZPin          microphoneClock;
+        ZPin          d0;
+        ZPin          d1;
+        ZPin          d2;
+        ZPin          d3;
+        ZPin          d4;
+
         ZPin          led;
-        ZPin          int1;
-        ZPin          temperature;
-        ZPin          light;
-        ZPin          buttonA;
-        ZPin          buttonB;
-        ZPin          buttonC;
-        ZPin          sda;
-        ZPin          scl;
-        ZPin          neopixel;
-        ZPin          flashMISO;
-        ZPin          flashMOSI;
-        ZPin          flashSCLK;
-        ZPin          flashSSEL;
 
         /**
           * Constructor.
@@ -105,7 +87,7 @@ namespace codal
           * Create a representation of all given I/O pins on the edge connector
           *
           */
-        CircuitPlaygroundIO();
+        TrinketIO();
     };
 }
 

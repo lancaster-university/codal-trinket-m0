@@ -1,5 +1,5 @@
 {
-    "device":"CIRCUIT_PLAYGROUND",
+    "device":"TRINKET_M0",
     "processor":"SAMD21G18A",
     "architecture":"CORTEX_M0_PLUS",
     "toolchain":"ARM_GCC",
